@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public class Porta {
     private boolean aberta = false;
     private String cor;
@@ -53,6 +55,7 @@ public class Porta {
         } else {
             System.out.println("A porta esta fechada.");
         }
+        
     }
 
     // metodo para exibir Porta
@@ -62,6 +65,10 @@ public class Porta {
         System.out.println("DimensaoX: " + this.dimensaoX);
         System.out.println("DimensaoY: " + this.dimensaoY);
         System.out.println("DimensaoZ: " + this.dimensaoZ);
+    }
+
+    public boolean aberta_fechada(){
+        return aberta;
     }
 
 }
