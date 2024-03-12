@@ -33,7 +33,9 @@ public class Programa {
         //conta daniela
         conta2.setDataPagamento("01072011");
         conta2.setDataVencimento("30072011");
-        conta2.setIdConta(2);
+        conta2.setIdConta(2)
+
+
 
         conta1.visualizarConta();
         conta2.visualizarConta();

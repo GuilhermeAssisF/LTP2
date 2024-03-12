@@ -37,6 +37,8 @@ public class Conta {
         this.dataPagamento = (dataPagamento = formatador.format(data));
     }
 
+    
+
     //metodo para vizualizar contas
     public void visualizarConta(){
         System.out.println("CONTAS PAGAS");
