@@ -5,14 +5,14 @@ public class Conta {
     private int idConta;
     private String dataVencimento, dataPagamento;
     //referenciando Produto
-    Produto pro;
+    private Produto pro;
     //referenciando Cliente
-    Cliente cli;
+    private Cliente cli;
 
     Date data = new Date();
     // Define o formato da data
     SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
-
+    
     //getset idConta
     public int getIdConta(){
         return idConta;
@@ -36,8 +36,6 @@ public class Conta {
     public void setDataPagamento(String dataPagamento){
         this.dataPagamento = (dataPagamento = formatador.format(data));
     }
-
-    
 
     //metodo para vizualizar contas
     public void visualizarConta(){
