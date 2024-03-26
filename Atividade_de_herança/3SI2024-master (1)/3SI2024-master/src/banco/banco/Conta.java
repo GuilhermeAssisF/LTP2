@@ -9,7 +9,7 @@ package banco;
  *
  * @author tulio
  */
-public class Conta {
+abstract class Conta {
 
     private int numero;  // atributos ou variáveis de instância
     private double saldo;
@@ -81,9 +81,7 @@ public class Conta {
         this.saldo = this.saldo + quantidade;
     }
 
-    public void atualiza(double taxa){
-        this.saldo = saldo*taxa;
-    }
+    abstract void atualiza(double taxa);
 
     public void transfere(Conta destino, double quantidade) {
         if (this.saca(quantidade)) {
