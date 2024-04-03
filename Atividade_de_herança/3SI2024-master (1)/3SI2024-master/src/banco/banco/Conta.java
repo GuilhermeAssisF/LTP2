@@ -12,7 +12,7 @@ package banco;
 abstract class Conta {
 
     private int numero;  // atributos ou variáveis de instância
-    private double saldo;
+    protected double saldo;
     private double limite;
     private static  int totalDeContas;
     Cliente objCliente = new Cliente();
@@ -82,6 +82,7 @@ abstract class Conta {
     }
 
     abstract void atualiza(double taxa);
+
 
     public void transfere(Conta destino, double quantidade) {
         if (this.saca(quantidade)) {
