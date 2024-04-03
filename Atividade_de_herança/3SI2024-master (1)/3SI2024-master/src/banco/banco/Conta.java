@@ -9,7 +9,9 @@ package banco;
  *
  * @author tulio
  */
-abstract class Conta {
+class Conta {
+    
+
 
     private int numero;  // atributos ou variáveis de instância
     protected double saldo;
@@ -17,7 +19,6 @@ abstract class Conta {
     private static  int totalDeContas;
     Cliente objCliente = new Cliente();
     private int identificador;
-
      
 
     Conta() {
@@ -25,6 +26,7 @@ abstract class Conta {
         identificador = Conta.totalDeContas;
         System.out.println("Construindo uma conta!");
     }
+
 
     Conta(double saldo) {
         this(); // chama o contrutor padrão
@@ -77,11 +79,9 @@ abstract class Conta {
         }
     }
 
-    public void deposita(double quantidade) { //método
-        this.saldo = this.saldo + quantidade;
-    }
-
-    abstract void atualiza(double taxa);
+    abstract void deposita(double quantidade);
+    
+    abstract void atualiza(double selic);
 
 
     public void transfere(Conta destino, double quantidade) {
